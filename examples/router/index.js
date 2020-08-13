@@ -1,6 +1,12 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 import Hello from '../components/hello.vue'
+import Layout from '../docs/layout.md'
+import Button from '../docs/button.md'
+import Icon from '../docs/icon.md'
+import Link from '../docs/link.md'
+import Notification from '../docs/notification.md'
+import Input from '../docs/input.md'
 
 Vue.use(VueRouter)
 
@@ -16,32 +22,32 @@ export default new VueRouter({
         {
             path: '/layout',
             name: 'layout',
-            component: () => import(/* webpackChunkName: "layout" */ '../docs/layout.md')
+            component: Layout
         },
         {
             path: '/button',
             name: 'button',
-            component: () => import(/* webpackChunkName: "button" */ '../docs/button.md')
+            component: Button
         },
         {
             path: '/icon',
             name: 'icon',
-            component: () => import(/* webpackChunkName: "icon" */ '../docs/icon.md')
+            component: Icon
         },
         {
             path: '/link',
             name: 'link',
-            component: () => import(/* webpackChunkName: "link" */ '../docs/link.md')
+            component: Link
         },
         {
             path: '/notification',
             name: 'notification',
-            component: () => import(/* webpackChunkName: "notification" */ '../docs/notification.md')
+            component: Notification
         },
         {
             path: '/input',
             name: 'input',
-            component: () => import(/* webpackChunkName: "input" */ '../docs/input.md')
+            component: Input
         }
     ]
 })
