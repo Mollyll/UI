@@ -26,7 +26,7 @@ git commit -m 'deploy'
 # git push git@github.com:Mollyll/UI.git --delete gh-pages
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # 记得先配置git公私钥
-git push -f git@github.com:Mollyll/UI.git master:gh-pages
+git push -f git@github.com:Mollyll/UI.git master
 
 # 将目录通过subtree上传到gh-pages分支
 git subtree push --prefix dist git@github.com:Mollyll/UI.git gh-pages 
