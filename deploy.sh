@@ -17,12 +17,13 @@ git remote add origin https://github.com/Mollyll/UI.git
 git pull --rebase origin master 
 # 查看变更文件
 git status
+git add -A
 # 将更改的文件提交到仓库暂存区
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:Mollyll/Mollyll.github.io.git master
-# git push origin --delete branch
+# git push git@github.com:Mollyll/UI.git --delete gh-pages
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # 记得先配置git公私钥
 git push -f git@github.com:Mollyll/UI.git master:gh-pages

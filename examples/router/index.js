@@ -20,6 +20,10 @@ export default new VueRouter({
             component: Hello
         },
         {
+            path: '*',
+            redirect: "/"
+        },
+        {
             path: '/layout',
             name: 'layout',
             component: Layout
