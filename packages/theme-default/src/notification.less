@@ -1,0 +1,115 @@
+@import "./common/var.less";
+
+@keyframe fade-out {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opaity: 0.6;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.m-notification-fade-enter {
+	right: 0;
+	transform: translateX(100%);
+}
+  
+.m-notification-fade-leave {
+	opacity: 0;
+}
+
+@b m {
+	@e notification {
+        position: fixed;
+        align-items: center;
+        padding: 15px 25px;
+		width: 270px;
+		color: var(--color-base-black);
+		background: var(--color-white);
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+        flex-wrap: wrap;
+		border-radius: 6px;
+		opacity: 1;
+		z-index: 1000;
+		transition: opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s;
+        @m group {
+        	width: 100%;
+		}
+		@m box {
+			&.is-with-icon {
+				position: relative;
+				margin-left: 30px;
+			}
+		}
+		@m icon {
+			float: left;
+			width: 20px;
+			height: 100%;
+			&-success {
+				color: var(--color-success);
+			}
+			&-error {
+				color: var(--color-error);
+			}
+			&-info {
+				color: var(--color-info);
+			}
+			&-warning {
+				color: var(--color-warning);
+			}
+		}
+		@m title {
+			width: 100%;
+			font-size: var(--size-midium);
+			font-weight: 500;
+		}
+		@m content {
+			width: 100%;
+			padding-top: 8px;
+			font-size: var(--size-base);
+			p {
+				margin: 0;
+			}
+		}
+		@m close {
+		    position: absolute;
+		    right: 8px;
+		    top: 15px;
+		}
+	}
+}
+@keyframes slide-in {
+	from {
+		left: 0%;
+	}
+	to {
+		left:100%;
+	}
+}
+@-moz-keyframes slide-in {
+	from {
+		left: 0%;
+	}
+	to {
+		left:100%;
+	}
+}
+@-webkit-keyframes slide-in {
+	from {
+		left: 0%;
+	}
+	to {
+		left:100%;
+	}
+}
+@-o-keyframes slide-in {
+	from {
+		left: 0%;
+	}
+	to {
+		left:100%;
+	}
+}

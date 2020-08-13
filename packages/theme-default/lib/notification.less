@@ -1,0 +1,211 @@
+:root {
+	/* Transition
+  -------------------------- */
+	/* Colors
+  -------------------------- */
+	/* Link
+  -------------------------- */
+	/* Border
+  -------------------------- */
+	/* Box-shadow
+  -------------------------- */
+	/* Fill
+  -------------------------- */
+	/* Font
+  -------------------------- */
+	/* Size
+  -------------------------- */
+	/* z-index
+  -------------------------- */
+	/* Disable base
+  -------------------------- */
+	/* Icon
+  -------------------------- */
+	/* Checkbox
+  -------------------------- */
+	/* Radio
+  -------------------------- */
+	/* LimitTeaxtarea
+  ------------------------------------------*/
+	/* Select
+  -------------------------- */
+	/* Alert
+  -------------------------- */
+	/* Message Box
+  -------------------------- */
+	/* Message
+  -------------------------- */
+	/* Notification
+  -------------------------- */
+	/* Input
+  -------------------------- */
+	/* Cascader
+  -------------------------- */
+	/* Group
+  -------------------------- */
+	/* Tab
+  -------------------------- */
+	/* Button
+  -------------------------- */
+	/* cascader
+  -------------------------- */
+	/* Switch
+ -------------------------- */
+	/* Dialog
+ -------------------------- */
+	/* Table
+ -------------------------- */
+	/* Pagination
+ -------------------------- */
+	/* Popover
+ -------------------------- */
+	/* Tooltip
+  -------------------------- */
+	/* Tag
+  -------------------------- */
+	/* Dropdown
+  -------------------------- */
+	/* Badge
+  -------------------------- */
+	/* Card
+  --------------------------*/
+	/* Slider
+  --------------------------*/
+	/* Steps
+  --------------------------*/
+	/* Menu
+  --------------------------*/
+	/* Rate
+  --------------------------*/
+	/* DatePicker
+  --------------------------*/
+	/* Loading
+  --------------------------*/
+	/* Scrollbar
+  --------------------------*/
+	/* Carousel
+  --------------------------*/
+	/* Collapse
+  --------------------------*/
+	/* Transfer
+  --------------------------*/
+	/* Row
+  -----------------------------*/
+}
+
+@keyframe fade-out {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opaity: 0.6;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.m-notification-fade-enter {
+	right: 0;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+  
+.m-notification-fade-leave {
+	opacity: 0;
+}
+
+.m {}
+
+.m__notification {
+	position: fixed;
+	-ms-flex-align: center;
+	    -webkit-box-align: center;
+	    align-items: center;
+	padding: 15px 25px;
+	width: 270px;
+	color: rgb(31, 44, 61);
+	background: #fff;
+	-webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	border-radius: 6px;
+	opacity: 1;
+	z-index: 1000;
+	-webkit-transition: opacity .3s,left .3s,right .3s,top .4s,bottom .3s,-webkit-transform .3s;
+	transition: opacity .3s,left .3s,right .3s,top .4s,bottom .3s,-webkit-transform .3s;
+	transition: opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s;
+	transition: opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s,-webkit-transform .3s;
+}
+
+.m__notification--group {
+	width: 100%;
+}
+
+.m__notification--box {}
+
+.m__notification--box.is-with-icon {
+	position: relative;
+	margin-left: 30px;
+}
+
+.m__notification--icon {
+	float: left;
+	width: 20px;
+	height: 100%;
+}
+
+.m__notification--icon-success {
+	color: #13ce66;
+}
+
+.m__notification--icon-error {
+	color: #ff4949;
+}
+
+.m__notification--icon-info {
+	color: #9fa8aa;
+}
+
+.m__notification--icon-warning {
+	color: #f9b004;
+}
+
+.m__notification--title {
+	width: 100%;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.m__notification--content {
+	width: 100%;
+	padding-top: 8px;
+	font-size: 14px;
+}
+
+.m__notification--content p {
+	margin: 0;
+}
+
+.m__notification--close {
+	position: absolute;
+	right: 8px;
+	top: 15px;
+}
+@-webkit-keyframes slide-in {
+	from {
+		left: 0%;
+	}
+	to {
+		left:100%;
+	}
+}
+@keyframes slide-in {
+	from {
+		left: 0%;
+	}
+	to {
+		left:100%;
+	}
+}

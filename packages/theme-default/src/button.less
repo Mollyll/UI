@@ -1,0 +1,283 @@
+@import "common/var.less";
+
+@b m {
+    @e button {
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: var(--button-default-fill);
+        border: var(--border-base);
+        color: var(--button-default-color);
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        border-radius: var(--border-radius-base);
+        padding: 12px 20px;
+        font-size: 14px;
+
+        @m size-medium {
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        @m size-small {
+            padding: 9px 15px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        &.is-round {
+            border-radius: 20px;
+        }
+
+        @when disabled {
+			cursor: not-allowed;
+            background: var(--color-black-disabled);
+		}
+
+        @m size-default {
+            background: var(--button-default-fill);
+            border: var(--border-base);
+            color: var(--button-default-color);
+            font-size: var(--font-size-base);
+
+            i,
+            span {
+                font-size: var(--font-size-base);
+            }
+
+            &:hover,
+            &:focus {
+                background: rgba(var(--color-primary), 0.05);
+                border-color: rgba(var(--color-primary), 0.8);
+                color: var(--button-default-color);
+            }
+
+            @when disabled {
+                background: var(--color-white);
+                border-color: var(--border-color-disabled);
+            }
+
+            &:active {
+                background: var(--color-white);
+                outline: none;
+            }
+
+            @when plain {
+                border: 1px solid var(--border-color-base);
+
+                &:hover,
+                &:focus {
+                    background: var(--color-white);
+                    border-color: rgba(var(--color-primary), 0.8);
+                    color: var(--color-primary);
+                }
+
+                &:disabled {
+                    background: var(--button-default-fill);
+                    border: 1px solid var(--color-primary);
+                    color: var(--button-default-color);
+                }
+            }
+        }
+
+        @m primary {
+            background: var(--color-primary);
+            border: 1px solid var(--color-primary);
+            color: var(--color-white);
+
+            &:hover,
+            &:focus {
+                background: var(--color-primary-hover);
+                border-color: var(--color-primary-hover);
+                color: var(--color-white);
+            }
+
+            @when disabled {
+                background: var(--color-primary-disabled);
+                border-color: var(--color-primary-disabled);
+            }
+
+            @when plain {
+                background: rgba(var(--color-primary), 0.05);
+                border-color: rgba(var(--color-primary), 0.8);
+                color: var(--color-primary);
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                    background: var(--color-primary);
+                    border: 1px solid var(--color-primary);
+                    color: var(--color-white);
+                }
+
+                &:disabled {
+                    opacity: 0.3;
+                    background: rgba(var(--color-primary), 0.05);
+                    border-color: rgba(var(--color-primary), 0.8);
+                    color: var(--color-primary);
+                }
+            }
+        }
+
+        @m success {
+            background: var(--color-success);
+            border: 1px solid var(--color-success);
+            color: var(--color-white);
+
+            &:hover,
+            &:focus {
+                background: var(--color-success-hover);
+                border-color: var(--color-success-hover);
+                color: var(--color-white);
+            }
+
+            @when disabled {
+                background: var(--color-success-disabled);
+                border-color: var(--color-success-disabled);
+            }
+
+            @when plain {
+                background: rgba(var(--color-success), 0.05);
+                border-color: rgba(var(--color-success), 0.8);
+                color: var(--color-success);
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                    background: var(--color-success);
+                    border: 1px solid var(--color-success);
+                    color: var(--color-white);
+                }
+
+                &:disabled {
+                    opacity: 0.3;
+                    background: rgba(var(--color-success), 0.05);
+                    border-color: rgba(var(--color-success), 0.8);
+                    color: var(--color-success);
+                }
+            }
+        }
+
+        @m info {
+            background: var(--color-info);
+            border: 1px solid var(--color-info);
+            color: var(--color-white);
+
+            &:hover,
+            &:focus {
+                background: var(--color-info-hover);
+                border-color: var(--color-info-hover);
+                color: var(--color-white);
+            }
+
+            @when disabled {
+                background: var(--color-info-disabled);
+                border-color: var(--color-info-disabled);
+            }
+
+            @when plain {
+                background: rgba(var(--color-info), 0.05);
+                border-color: rgba(var(--color-info), 0.8);
+                color: var(--color-info);
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                    background: var(--color-info);
+                    border: 1px solid var(--color-info);
+                    color: var(--color-white);
+                }
+
+                &:disabled {
+                    opacity: 0.3;
+                    background: rgba(var(--color-info), 0.05);
+                    border-color: rgba(var(--color-info), 0.8);
+                    color: var(--color-info);
+                }
+            }
+        }
+
+        @m warning {
+            background: var(--color-warning);
+            border: 1px solid var(--color-warning);
+            color: var(--color-white);
+
+            &:hover,
+            &:focus {
+                background: var(--color-warning-hover);
+                border-color: var(--color-warning-hover);
+                color: var(--color-white);
+            }
+
+            @when disabled {
+                background: var(--color-warning-disabled);
+                border-color: var(--color-warning-disabled);
+            }
+
+            @when plain {
+                background: rgba(var(--color-warning), 0.05);
+                border-color: rgba(var(--color-warning), 0.8);
+                color: var(--color-warning);
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                    background: var(--color-warning);
+                    border: 1px solid var(--color-warning);
+                    color: var(--color-white);
+                }
+
+                &:disabled {
+                    opacity: 0.3;
+                    background: rgba(var(--color-warning), 0.05);
+                    border-color: rgba(var(--color-warning), 0.8);
+                    color: var(--color-warning);
+                }
+            }
+        }
+
+        @m danger {
+            background: var(--color-danger);
+            border: 1px solid var(--color-danger);
+            color: var(--color-white);
+
+            &:hover,
+            &:focus {
+                background: var(--color-danger-hover);
+                border-color: var(--color-danger-hover);
+                color: var(--color-white);
+            }
+
+            @when disabled {
+                background: var(--color-danger-disabled);
+                border-color: var(--color-danger-disabled);
+            }
+
+            @when plain {
+                background: rgba(var(--color-danger), 0.05);
+                border-color: rgba(var(--color-danger), 0.8);
+                color: var(--color-danger);
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                    background: var(--color-danger);
+                    border: 1px solid var(--color-danger);
+                    color: var(--color-white);
+                }
+
+                &:disabled {
+                    opacity: 0.3;
+                    background: rgba(var(--color-danger), 0.05);
+                    border-color: rgba(var(--color-danger), 0.8);
+                    color: var(--color-danger);
+                }
+            }
+        }
+    }
+}
