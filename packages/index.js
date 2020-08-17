@@ -8,6 +8,7 @@ import MCol from './col/index.js';
 import MLink from './link/index.js';
 import MIcon from './icon/index.js';
 import MInput from './input/index.js';
+import MSelect from './select/index.js';
 import MetaInfo from './meta-info/index.js';
 import MNotification from './notification/index.js';
 import notify from './notification/function.js'
@@ -19,7 +20,8 @@ const components = [
     MIcon,
     MLink,
     MNotification,
-    MInput
+    MInput,
+    MSelect
 ]
 
 const install = function(Vue) {
@@ -40,5 +42,6 @@ export default {
     MIcon,
     MLink,
     MNotification,
-    MInput
+    MInput,
+    MSelect
 }

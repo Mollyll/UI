@@ -17,15 +17,15 @@ module.exports = function(source) {
   let id = 0; // demo 的 id
   let output = []; // 输出的内容
   let start = 0; // 字符串开始位置
-
+  
   let commentStart = content.indexOf(startTag);
   let commentEnd = content.indexOf(endTag, commentStart + startTagLen);
   while (commentStart !== -1 && commentEnd !== -1) {
     output.push(content.slice(start, commentStart));
 
-    const commentContent = content.slice(commentStart + startTagLen, commentEnd);
-    const html = stripTemplate(commentContent);
-    const script = stripScript(commentContent);
+    const commentContent = content.slice(commentStart + startTagLen, commentEnd); // code 内容
+    const html = stripTemplate(commentContent); // 获取 html 内容
+    const script = stripScript(commentContent); // 获取 script 内容
     let demoComponentContent = genInlineComponentText(html, script);
     const demoComponentName = `element-demo${id}`;
     output.push(`<${demoComponentName} slot="source" />`);
@@ -37,7 +37,7 @@ module.exports = function(source) {
     commentStart = content.indexOf(startTag, start);
     commentEnd = content.indexOf(endTag, commentStart + startTagLen);
   }
-
+  
   // 仅允许在 demo 不存在时，才可以在 Markdown 中写 script 标签
   // todo: 优化这段逻辑
   let pageScript = '';

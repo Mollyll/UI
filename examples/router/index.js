@@ -1,57 +1,27 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-import Hello from '../components/hello.vue'
-import Layout from '../docs/layout.md'
-import Button from '../docs/button.md'
-import Icon from '../docs/icon.md'
-import Link from '../docs/link.md'
-import Notification from '../docs/notification.md'
-import Input from '../docs/input.md'
+import routes from './routes.js'
 
 Vue.use(VueRouter)
 
-
-export default new VueRouter({
+let router = new VueRouter({
     mode: 'history',
-    routes: [
-        {
-            path: '/',
-            name: 'hello',
-            component: Hello
-        },
-        {
-            path: '*',
-            redirect: "/"
-        },
-        {
-            path: '/layout',
-            name: 'layout',
-            component: Layout
-        },
-        {
-            path: '/button',
-            name: 'button',
-            component: Button
-        },
-        {
-            path: '/icon',
-            name: 'icon',
-            component: Icon
-        },
-        {
-            path: '/link',
-            name: 'link',
-            component: Link
-        },
-        {
-            path: '/notification',
-            name: 'notification',
-            component: Notification
-        },
-        {
-            path: '/input',
-            name: 'input',
-            component: Input
+    routes,
+    linkActiveClass: 'active-link',
+    linkExactActiveClass: 'exact-active-link',
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return {
+                x: 0,
+                y: 0
+            }
         }
-    ]
+    }
+});
+router.beforeEach((to, from, next) => {
+    next();
 })
+
+export default router

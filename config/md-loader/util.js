@@ -34,7 +34,7 @@ function genInlineComponentText(template, script) {
     filename: 'inline-component', // TODO：这里有待调整
     compiler
   };
-  const compiled = compileTemplate(finalOptions);
+  const compiled = compileTemplate(finalOptions); // 编译为 AST 树
   // tips
   if (compiled.tips && compiled.tips.length) {
     compiled.tips.forEach(tip => {
