@@ -131,7 +131,7 @@ export default {
   },
 
   created() {
-    const highlight = this.$slots.highlight;
+    /* const highlight = this.$slots.highlight;
     if (highlight && highlight[0]) {
       let code = "";
       let cur = highlight[0];
@@ -146,7 +146,7 @@ export default {
         this.jsfiddle.script = stripScript(code);
         this.jsfiddle.style = stripStyle(code);
       }
-    }
+    } */
   },
 
   mounted() {
